@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2425825150,527813223&fm=58&s=8C0E7432DD276F1106E587E503005025&bpow=121&bpoh=75">
 <meta property="og:image" content="https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=3334143358,1552949078&fm=202&mola=new&crop=v1">
 <meta property="og:image" content="https://qq.yh31.com/tp/zjbq/201807071048278385.gif">
-<meta property="og:updated_time" content="2018-11-26T13:14:27.482Z">
+<meta property="og:updated_time" content="2018-11-26T13:17:27.278Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-interview">
 <meta name="twitter:description" content="1.scss是什么？在vue.cli中的安装使用步骤是？有哪几大特性?scss是一种css预处理器(sass的最新版本),它可以让我们写一些高级的css,如规则嵌套、变量、混合、继承等等特性，让CSS的书写更加有趣与程式化。  vue.cli的安装步骤: 12npm install -D sass-loader node-sassimport &amp;apos;xxx.scss&amp;apos; 特性:  规">
@@ -102,7 +102,7 @@
 <p>vue可以帮助我们构建复杂的spa页面,可以让前端页面像native app,拥有更好的用户体验.vue的对中文友好,社区活跃,第三方插件多.vue的核心特点是数据双向绑定和组件化.</p>
 <h1 id="3-请说下你对vue声明周期的理解-他的作用"><a href="#3-请说下你对vue声明周期的理解-他的作用" class="headerlink" title="3.请说下你对vue声明周期的理解?他的作用?"></a>3.请说下你对vue声明周期的理解?他的作用?</h1><p>Vue 实例从创建到销毁的过程，就是生命周期。</p>
 <p>作用是在vue实例创建和销毁时的几个阶段,调用对应的生命周期函数,可以在对应的时间里做一些操作,如计算数据、调用方法等.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">beforeCreate     在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。</span><br><span class="line">created          在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然				    而，挂载阶段还没开始，$el 属性目前不可见。</span><br><span class="line">beforeMount      在挂载开始之前被调用：相关的 render 函数首次被调用。</span><br><span class="line">mounted          el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档				   内。</span><br><span class="line">beforeUpdate     数据更新时调用，发生在虚拟 DOM 打补丁之前。这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器。</span><br><span class="line">updated          由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于       			  DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态。如果要相应状态改变，通常最好使用计算属性或 watcher 取而代之。</span><br><span class="line">activated        keep-alive 组件激活时调用。</span><br><span class="line">deactivated      keep-alive 组件停用时调用。</span><br><span class="line">beforeDestroy    实例销毁之前调用。在这一步，实例仍然完全可用。</span><br><span class="line">destroyed        Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</span><br><span class="line">errorCaptured    当捕获一个来自子孙组件的错误时被调用。此钩子会收到三个参数：错误对象、发生错误的组件实例以及一个包含错误来源信息的字符串。此钩子可以返			    回 false 以阻止该错误继续向上传播。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">beforeCreate     在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。</span><br><span class="line">created          在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然	而，挂载阶段还没开始，$el 属性目前不可见。</span><br><span class="line">beforeMount      在挂载开始之前被调用：相关的 render 函数首次被调用。</span><br><span class="line">mounted          el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。</span><br><span class="line">beforeUpdate     数据更新时调用，发生在虚拟 DOM 打补丁之前。这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器。</span><br><span class="line">updated          由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于   DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态。如果要相应状态改变，通常最好使用计算属性或 watcher 取而代之。</span><br><span class="line">activated        keep-alive 组件激活时调用。</span><br><span class="line">deactivated      keep-alive 组件停用时调用。</span><br><span class="line">beforeDestroy    实例销毁之前调用。在这一步，实例仍然完全可用。</span><br><span class="line">destroyed        Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</span><br><span class="line">errorCaptured    当捕获一个来自子孙组件的错误时被调用。此钩子会收到三个参数：错误对象、发生错误的组件实例以及一个包含错误来源信息的字符串。此钩子可以返回 false 以阻止该错误继续向上传播。</span><br></pre></td></tr></table></figure>
 <p><code>它可以总共分为11个阶段：创建前/后, 载入前/后,更新前/后,keep-alive组件激活前/后,销毁前/销毁后,子孙组件报错时.</code></p>
 <p><code>&lt;keep-alive&gt;是Vue的内置组件，能在组件切换过程中将状态保留在内存中，防止重复渲染DOM。</code></p>
 <p><code>&lt;keep-alive&gt; 包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们。</code></p>
@@ -142,7 +142,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://foolishsteamer.github.io/hexo/2018/11/26/vue-interview/" data-id="cjoyc3t7t0002dwidd5swnzpb" class="article-share-link">Share</a>
+      <a data-url="https://foolishsteamer.github.io/hexo/2018/11/26/vue-interview/" data-id="cjp9sz36r0003h0idovnk9pqu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,9 +152,9 @@
 <nav id="article-nav">
   
   
-    <a href="/hexo/2018/11/20/markdown/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/hexo/2018/11/22/webpack/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">markdown</div>
+      <div class="article-nav-title"></div>
     </a>
   
 </nav>
@@ -192,6 +192,10 @@
         
           <li>
             <a href="/hexo/2018/11/26/vue-interview/">vue-interview</a>
+          </li>
+        
+          <li>
+            <a href="/hexo/2018/11/22/webpack/">(no title)</a>
           </li>
         
           <li>

@@ -96,7 +96,7 @@
 <p>vue可以帮助我们构建复杂的spa页面,可以让前端页面像native app,拥有更好的用户体验.vue的对中文友好,社区活跃,第三方插件多.vue的核心特点是数据双向绑定和组件化.</p>
 <h1 id="3-请说下你对vue声明周期的理解-他的作用"><a href="#3-请说下你对vue声明周期的理解-他的作用" class="headerlink" title="3.请说下你对vue声明周期的理解?他的作用?"></a>3.请说下你对vue声明周期的理解?他的作用?</h1><p>Vue 实例从创建到销毁的过程，就是生命周期。</p>
 <p>作用是在vue实例创建和销毁时的几个阶段,调用对应的生命周期函数,可以在对应的时间里做一些操作,如计算数据、调用方法等.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">beforeCreate     在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。</span><br><span class="line">created          在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然				    而，挂载阶段还没开始，$el 属性目前不可见。</span><br><span class="line">beforeMount      在挂载开始之前被调用：相关的 render 函数首次被调用。</span><br><span class="line">mounted          el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档				   内。</span><br><span class="line">beforeUpdate     数据更新时调用，发生在虚拟 DOM 打补丁之前。这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器。</span><br><span class="line">updated          由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于       			  DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态。如果要相应状态改变，通常最好使用计算属性或 watcher 取而代之。</span><br><span class="line">activated        keep-alive 组件激活时调用。</span><br><span class="line">deactivated      keep-alive 组件停用时调用。</span><br><span class="line">beforeDestroy    实例销毁之前调用。在这一步，实例仍然完全可用。</span><br><span class="line">destroyed        Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</span><br><span class="line">errorCaptured    当捕获一个来自子孙组件的错误时被调用。此钩子会收到三个参数：错误对象、发生错误的组件实例以及一个包含错误来源信息的字符串。此钩子可以返			    回 false 以阻止该错误继续向上传播。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">beforeCreate     在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。</span><br><span class="line">created          在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然	而，挂载阶段还没开始，$el 属性目前不可见。</span><br><span class="line">beforeMount      在挂载开始之前被调用：相关的 render 函数首次被调用。</span><br><span class="line">mounted          el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。</span><br><span class="line">beforeUpdate     数据更新时调用，发生在虚拟 DOM 打补丁之前。这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器。</span><br><span class="line">updated          由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于   DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态。如果要相应状态改变，通常最好使用计算属性或 watcher 取而代之。</span><br><span class="line">activated        keep-alive 组件激活时调用。</span><br><span class="line">deactivated      keep-alive 组件停用时调用。</span><br><span class="line">beforeDestroy    实例销毁之前调用。在这一步，实例仍然完全可用。</span><br><span class="line">destroyed        Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</span><br><span class="line">errorCaptured    当捕获一个来自子孙组件的错误时被调用。此钩子会收到三个参数：错误对象、发生错误的组件实例以及一个包含错误来源信息的字符串。此钩子可以返回 false 以阻止该错误继续向上传播。</span><br></pre></td></tr></table></figure>
 <p><code>它可以总共分为11个阶段：创建前/后, 载入前/后,更新前/后,keep-alive组件激活前/后,销毁前/销毁后,子孙组件报错时.</code></p>
 <p><code>&lt;keep-alive&gt;是Vue的内置组件，能在组件切换过程中将状态保留在内存中，防止重复渲染DOM。</code></p>
 <p><code>&lt;keep-alive&gt; 包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们。</code></p>
@@ -136,7 +136,66 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://foolishsteamer.github.io/hexo/2018/11/26/vue-interview/" data-id="cjoyc3t7t0002dwidd5swnzpb" class="article-share-link">Share</a>
+      <a data-url="https://foolishsteamer.github.io/hexo/2018/11/26/vue-interview/" data-id="cjp9sz36r0003h0idovnk9pqu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-webpack" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo/2018/11/22/webpack/" class="article-date">
+  <time datetime="2018-11-22T14:16:30.237Z" itemprop="datePublished">2018-11-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>title: hexo<br>date: 2018-11-26 18:40:14<br>tags:</p>
+<h1 id="webpack手动搭建"><a href="#webpack手动搭建" class="headerlink" title="webpack手动搭建"></a>webpack手动搭建</h1><p>最近听说有公司面试时问你会不会手动配置webpack,你敢说会,hr就扛台电脑就过来了</p>
+<p>于是试了一下webpack的步骤,顺便记录下来</p>
+<p>首先</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+<p>初始化项目(不同于官方文档,不要先下webpack包,先下包会让你的package.json全是依赖,让人绝望).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev webpack</span><br><span class="line">npm install --save-dev webpack-cli</span><br></pre></td></tr></table></figure>
+<p>如果嫌慢,可以使用淘宝的npm镜像网站cnpm,cnpm每10分钟会拷贝一次npm.还有由于cnpm的node_module文件存放方式不同,cnpm会比npm快,有兴趣可以搜索npm cnpm.再加上缩写偷懒.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i --save-dev webpack webpack-cli</span><br></pre></td></tr></table></figure>
+<p>创建src目录,里面放你要打包的js/css/img/less/scss/svg等等</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  webpack-demo</span><br><span class="line">  |- package.json</span><br><span class="line">+ |- /dist</span><br><span class="line">+   |- index.html</span><br><span class="line">+ |- index.html</span><br><span class="line">+ |- /src</span><br><span class="line">+   |- index.js</span><br></pre></td></tr></table></figure>
+<p>src/index.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&apos;hello world&apos;);</span><br></pre></td></tr></table></figure>
+<p>index.html</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  &lt;!doctype html&gt;</span><br><span class="line">  &lt;html&gt;</span><br><span class="line">   &lt;head&gt;</span><br><span class="line">     &lt;title&gt;起步&lt;/title&gt;</span><br><span class="line">   &lt;/head&gt;</span><br><span class="line">   &lt;body&gt;</span><br><span class="line">+    &lt;script src=&quot;./main.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">   &lt;/body&gt;</span><br><span class="line">  &lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>官方原话</p>
+<blockquote>
+<p>我们还需要调整 <code>package.json</code> 文件，以便确保我们安装包是<code>私有的(private)</code>，并且移除 <code>main</code> 入口。这可以防止意外发布你的代码。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  &#123;</span><br><span class="line">    &quot;name&quot;: &quot;webpack-demo&quot;,</span><br><span class="line">    &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">    &quot;description&quot;: &quot;&quot;,</span><br><span class="line">+   &quot;private&quot;: true,</span><br><span class="line">-   &quot;main&quot;: &quot;index.js&quot;,</span><br><span class="line">    &quot;scripts&quot;: &#123;</span><br><span class="line">      &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;keywords&quot;: [],</span><br><span class="line">    &quot;author&quot;: &quot;&quot;,</span><br><span class="line">    &quot;license&quot;: &quot;ISC&quot;,</span><br><span class="line">    &quot;devDependencies&quot;: &#123;</span><br><span class="line">      &quot;webpack&quot;: &quot;^4.0.1&quot;,</span><br><span class="line">      &quot;webpack-cli&quot;: &quot;^2.0.9&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;dependencies&quot;: &#123;&#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>先测试一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx webpack</span><br></pre></td></tr></table></figure>
+<p>黄字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The &apos;mode&apos; option has not been set. Set &apos;mode&apos; option to &apos;development&apos; or &apos;production&apos; to enable defaults for this environment.</span><br></pre></td></tr></table></figure>
+<p>证明成功了.</p>
+<p>再新建一个webpack.config.js配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  |- package.json</span><br><span class="line">+ |- webpack.config.js</span><br><span class="line">  |- /dist</span><br><span class="line">    |- index.html</span><br><span class="line">  |- /src</span><br><span class="line">    |- index.js</span><br></pre></td></tr></table></figure>
+<p>webpack.config.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&apos;path&apos;);</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  entry: &apos;./src/index.js&apos;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: &apos;main.js&apos;,</span><br><span class="line">    path: path.resolve(__dirname, &apos;dist&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>终端运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx webpack</span><br></pre></td></tr></table></figure>
+<p>会在dist文件夹生成一个main.js</p>
+<p>最后打开index.html,就会输出helloworld</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://foolishsteamer.github.io/hexo/2018/11/22/webpack/" data-id="cjp9sz36n0001h0idj5net07v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -350,7 +409,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://foolishsteamer.github.io/hexo/2018/11/20/markdown/" data-id="cjoyc3t7h0000dwid31b2sx0e" class="article-share-link">Share</a>
+      <a data-url="https://foolishsteamer.github.io/hexo/2018/11/20/markdown/" data-id="cjp9sz36q0002h0id7bcxsh77" class="article-share-link">Share</a>
       
       
     </footer>
@@ -395,7 +454,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://foolishsteamer.github.io/hexo/2018/11/20/hello-world/" data-id="cjoyc3t7o0001dwidtolgdu8i" class="article-share-link">Share</a>
+      <a data-url="https://foolishsteamer.github.io/hexo/2018/11/20/hello-world/" data-id="cjp9sz36i0000h0idc23t9fvt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -437,6 +496,10 @@
         
           <li>
             <a href="/hexo/2018/11/26/vue-interview/">vue-interview</a>
+          </li>
+        
+          <li>
+            <a href="/hexo/2018/11/22/webpack/">(no title)</a>
           </li>
         
           <li>
